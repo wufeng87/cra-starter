@@ -155,6 +155,23 @@ module.exports = {
               cacheDirectory: true,
             },
           },
+          // less loader
+          {
+            test: /\.less$/,
+            use: [
+              require.resolve('style-loader'),
+              {
+                loader: require.resolve('css-loader'),
+                options: {
+                  importLoaders: 1,
+                },
+              },
+              {
+                // style!css!less
+                loader: require.resolve('less-loader')
+              }
+            ],
+          },
           // "postcss" loader applies autoprefixer to our CSS.
           // "css" loader resolves paths in CSS and adds assets as dependencies.
           // "style" loader turns CSS into JS modules that inject <style> tags.
@@ -208,6 +225,7 @@ module.exports = {
               name: 'static/media/[name].[hash:8].[ext]',
             },
           },
+
         ],
       },
       // ** STOP ** Are you adding a new loader?
