@@ -12,7 +12,7 @@ class App extends Component {
   render() {
     return (
 
-      <Layout>
+      <Layout style={{ height: "100%" }}>
         <Sider
           breakpoint="lg"
           collapsedWidth="0"
@@ -41,7 +41,7 @@ class App extends Component {
         <Layout>
         <Header style={{ background: '#fff', padding: 0 }} />
         <Content style={{ margin: '24px 16px 0' }}>
-          <div style={{ padding: 24, background: '#fff', minHeight: 360 }}>
+          <div style={{ padding: 24, background: '#fff', minHeight: 480 }}>
             content
           </div>
         </Content>
