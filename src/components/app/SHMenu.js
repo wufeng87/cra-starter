@@ -2,11 +2,11 @@ import React, { PropTypes } from 'react';
 
 import { Menu, Icon } from 'antd';
 
-const SHMenu = ( { menuMetaData } ) => (
-  <Menu theme="dark" mode="inline" defaultSelectedKeys={['4']}>
-    <Menu.Item key="1">
+const SHMenu = ( { menuMetaData, routeTo } ) => (
+  <Menu theme="dark" mode="inline" defaultSelectedKeys={['4']} onClick={(selectedNodes, event) => routeTo(selectedNodes, event)}>
+    <Menu.Item key="todo">
       <Icon type="user" />
-      <span className="nav-text">nav 111</span>
+      <span className="nav-text">todo</span>
     </Menu.Item>
     <Menu.Item key="2">
       <Icon type="video-camera" />
